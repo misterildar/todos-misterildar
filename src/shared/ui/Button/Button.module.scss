@@ -1,0 +1,71 @@
+@use "@/shared/styles/variables.scss" as *;
+
+.button {
+  border: none;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: all $transition-normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  width: 100%;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    transform: translateY(-1px);
+  }
+}
+
+.primary {
+  background: $primary-color;
+  color: white;
+
+  &:not(:disabled):hover {
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.secondary {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+
+  &:not(:disabled):hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+  }
+}
+
+.danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+
+  &:not(:disabled):hover {
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  }
+}
+
+.small {
+  padding: 6px 12px;
+  font-size: 12px;
+  min-height: 32px;
+}
+
+.medium {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.large {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-height: 48px;
+}

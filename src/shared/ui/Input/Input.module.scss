@@ -1,0 +1,19 @@
+@use "@/shared/styles/variables.scss" as *;
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  font-size: 24px;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  position: relative;
+
+  &::placeholder {
+    color: #989595;
+    font-style: italic;
+  }
+}

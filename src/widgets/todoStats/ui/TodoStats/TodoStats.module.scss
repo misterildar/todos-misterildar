@@ -1,0 +1,56 @@
+@use "@/shared/styles/variables.scss" as *;
+
+.todoStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  color: #777;
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  font-size: 14px;
+  color: #777;
+}
+
+.filters {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.filterButton {
+  color: #777;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    border-color: rgba(175, 47, 47, 0.1);
+  }
+
+  &.active {
+    border-color: rgba(175, 47, 47, 0.2);
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}

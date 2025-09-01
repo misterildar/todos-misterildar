@@ -1,0 +1,24 @@
+@use "@/shared/styles/variables.scss" as *;
+
+.toggleButton {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $border-color;
+  border-radius: $border-radius-sm;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-normal;
+  color: white;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &.completed {
+    background: $primary-color;
+    border-color: $primary-color;
+  }
+}

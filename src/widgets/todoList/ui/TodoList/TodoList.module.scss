@@ -1,0 +1,18 @@
+@use "@/shared/styles/variables.scss" as *;
+
+.todoList {
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+}
+
+.emptyState {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $text-muted;
+  font-style: italic;
+}
+
+.emptyStateText {
+  margin: 0;
+  font-size: $font-size-md;
+}
