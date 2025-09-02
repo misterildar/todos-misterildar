@@ -1,3 +1,5 @@
+@use "../shared/styles/variables.scss" as *;
+
 .container {
   max-width: 800px;
   width: 100%;
@@ -7,8 +9,8 @@
 }
 
 .todoapp {
-  border: 1px solid #544e4e;
-  background: white;
+  border: 1px solid $gray-darker;
+  background: $white;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   padding: 25px;
@@ -24,7 +26,7 @@
     left: 15px;
     right: 15px;
     bottom: -15px;
-    background: #f8f8f8;
+    background: $gray-light;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15),
       0 20px 40px 0 rgba(0, 0, 0, 0.1);
@@ -38,7 +40,7 @@
     left: 30px;
     right: 30px;
     bottom: -30px;
-    background: #f0f0f0;
+    background: $gray-light;
     border-radius: 8px;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1),
       0 30px 60px 0 rgba(0, 0, 0, 0.08);

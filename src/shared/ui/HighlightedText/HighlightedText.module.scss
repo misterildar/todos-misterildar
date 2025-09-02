@@ -1,6 +1,8 @@
+@use "@/shared/styles/variables.scss" as *;
+
 .highlight {
-  background-color: #fff3cd;
-  color: #856404;
+  background-color: $accent-warning-bg;
+  color: $accent-warning;
   padding: 0.1em 0.2em;
   border-radius: 0.2em;
   font-weight: 600;

@@ -31,18 +31,18 @@
 }
 
 .secondary {
-  background: #f8f9fa;
-  color: #495057;
-  border: 1px solid #dee2e6;
+  background: $gray-light;
+  color: $gray-darker;
+  border: 1px solid $gray-medium;
 
   &:not(:disabled):hover {
-    background: #e9ecef;
-    border-color: #adb5bd;
+    background: $gray-medium;
+    border-color: $gray-dark;
   }
 }
 
 .danger {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  background: linear-gradient(135deg, $danger-color 0%, $danger-hover 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 

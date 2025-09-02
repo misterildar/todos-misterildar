@@ -1,3 +1,5 @@
+@use "@/shared/styles/variables.scss" as *;
+
 .searchContainer {
   position: relative;
   width: 100%;
@@ -6,20 +8,20 @@
 .searchInput {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 1rem;
-  border: 1px solid #e1e5e9;
+  border: 1px solid $gray-medium;
   border-radius: 0.5rem;
   font-size: 1rem;
-  background-color: #ffffff;
+  background-color: $white;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba(36, 106, 171, 0.1);
   }
 
   &::placeholder {
-    color: #6c757d;
+    color: $gray-dark;
   }
 }
 
@@ -30,7 +32,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #6c757d;
+  color: $gray-dark;
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 50%;
@@ -42,13 +44,13 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background-color: #f8f9fa;
-    color: #495057;
+    background-color: $gray-light;
+    color: $gray-darker;
   }
 
   &:focus {
     outline: none;
-    background-color: #e9ecef;
-    color: #495057;
+    background-color: $gray-medium;
+    color: $gray-darker;
   }
 }

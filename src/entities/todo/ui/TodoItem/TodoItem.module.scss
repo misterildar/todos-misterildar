@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid $gray-medium;
   font-size: 24px;
   border: none;
   transition: all $transition-normal;
@@ -13,7 +13,7 @@
   &.completed {
     .text {
       text-decoration: line-through;
-      color: #d9d9d9;
+      color: $gray-medium;
     }
   }
 }
@@ -27,7 +27,7 @@
 .checkbox {
   width: 40px;
   height: 40px;
-  border: 1px solid #ededed;
+  border: 1px solid $gray-medium;
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
@@ -35,16 +35,16 @@
   align-items: center;
   justify-content: center;
   transition: all $transition-normal;
-  color: #5dc2af;
+  color: $accent-success;
   margin-right: 15px;
 
   &:hover {
-    border-color: #5dc2af;
+    border-color: $accent-success;
   }
 
   &.checked {
     background: transparent;
-    border-color: #5dc2af;
+    border-color: $accent-success;
   }
 
   @media (max-width: 500px) {
@@ -56,7 +56,7 @@
 .text {
   flex: 1;
   font-size: 24px;
-  color: #4d4d4d;
+  color: $gray-darker;
   word-break: break-word;
   padding: 15px;
 
@@ -74,5 +74,5 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #af5b5e;
+  color: $accent-danger;
 }

@@ -1,17 +1,21 @@
 $primary-color: #246aab;
-$secondary-color: #f8f9fa;
 $danger-color: #ff6b6b;
 $success-color: #51cf66;
+$danger-hover: #ee5a52;
 
-$text-primary: #495057;
-$text-secondary: #6c757d;
-$text-muted: #adb5bd;
+$white: #ffffff;
+$gray-light: #f0f0f0;
+$gray-medium: #e9ecef;
+$gray-dark: #adb5bd;
+$gray-darker: #495057;
 
-$border-color: #e9ecef;
-$border-hover: #ced4da;
+$accent-success: #5dc2af;
+$accent-danger: #af5b5e;
+$accent-warning: #856404;
+$accent-placeholder: #989595;
+$accent-warning-bg: #fff3cd;
 
-$background-primary: #ffffff;
-$background-secondary: #f8f9fa;
+$title-color: rgba(175, 47, 47, 0.7);
 
 $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 $shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
