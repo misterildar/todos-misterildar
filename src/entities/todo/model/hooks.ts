@@ -90,7 +90,7 @@ export const useTodoActions = () => {
 };
 
 export const useHasCompletedTodos = () => {
-  return useTodoStore((state) => state.todos.some((todo) => !todo.completed));
+  return useTodoStore((state) => state.todos.some((todo) => todo.completed));
 };
 
 export const useHasActiveTodos = () => {

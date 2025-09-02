@@ -9,7 +9,7 @@
 }
 
 .todoapp {
-  border: 1px solid $gray-darker;
+  border: 1px solid $gray-dark;
   background: $white;
   position: relative;
   box-shadow: 0 2px 4px 0 $shadow-dark, 0 $lg 50px 0 $shadow-light;
@@ -43,5 +43,18 @@
     border-radius: $radius-md;
     box-shadow: 0 6px 12px 0 $shadow-light, 0 30px $size-xl 0 $shadow-light;
     z-index: -2;
+  }
+}
+
+.title {
+  font-size: 100px;
+  font-weight: $weight-thin;
+  color: $title-color;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 80px;
   }
 }

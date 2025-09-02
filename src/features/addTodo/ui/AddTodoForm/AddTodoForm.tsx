@@ -30,20 +30,20 @@ export const AddTodoForm: FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-        <Input
-          value={text}
-          onChange={handleInputChange}
-          placeholder="What needs to be done?"
-          onKeyDown={handleKeyDown}
-          autoFocus
-        />
-        <Button
-          type="submit"
-          disabled={!text.trim()}
-          className={styles.button}
-          text="Add Todo"
-        />
+    <form onSubmit={handleSubmit} className={styles.form} data-testid="form">
+      <Input
+        value={text}
+        onChange={handleInputChange}
+        placeholder="What needs to be done?"
+        onKeyDown={handleKeyDown}
+        autoFocus
+      />
+      <Button
+        type="submit"
+        disabled={!text.trim()}
+        className={styles.button}
+        text="Add Todo"
+      />
     </form>
   );
 };

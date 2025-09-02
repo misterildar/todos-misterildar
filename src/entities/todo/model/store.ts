@@ -10,9 +10,12 @@ export const useTodoStore = create<TodoState>()(
       searchQuery: "",
 
       addTodo: (text: string) => {
+        const trimmedText = text.trim();
+        if (!trimmedText) return;
+
         const newTodo: Todo = {
-          id: Date.now().toString(),
-          text: text.trim(),
+          id: crypto.randomUUID(),
+          text: trimmedText,
           completed: false,
           createdAt: new Date(),
         };

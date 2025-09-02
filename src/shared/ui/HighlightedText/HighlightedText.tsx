@@ -11,7 +11,7 @@ export const HighlightedText: FC<HighlightedTextProps> = ({
   highlight,
   className = "",
 }) => {
-  if (!highlight.trim()) {
+  if (!highlight || !highlight.trim()) {
     return <span className={className}>{text}</span>;
   }
 

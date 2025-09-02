@@ -1,5 +1,5 @@
 import "@/shared/styles/global.scss";
-import { TodoInput } from "@/widgets/todoInput";
+import { AddTodoForm } from "@/features/addTodo";
 import { TodoList } from "@/widgets/todoList";
 import { TodoStats } from "@/widgets/todoStats";
 import { SearchInput } from "@/features/search";
@@ -10,7 +10,8 @@ function App() {
   return (
     <div className={styles.container}>
       <div className={styles.todoapp}>
-        <TodoInput />
+        <h1 className={styles.title}>todos</h1>
+        <AddTodoForm />
         <SearchInput />
         <TodoList />
         <TodoStats />

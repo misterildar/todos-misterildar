@@ -23,6 +23,7 @@ export const TodoItem: FC<TodoItemProps> = ({ todo, onToggle, onRemove }) => {
       className={clsx(styles.todoItem, {
         [styles.completed]: todo.completed,
       })}
+      data-testid="todo-item"
     >
       <div className={styles.content}>
         <button
@@ -31,7 +32,7 @@ export const TodoItem: FC<TodoItemProps> = ({ todo, onToggle, onRemove }) => {
           })}
           onClick={handleToggle}
           aria-label={
-            todo.completed ? "Mark as not completed" : "Mark as completed"
+            todo.completed ? "Mark as completed" : "Mark as not completed"
           }
         >
           {todo.completed && (

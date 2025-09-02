@@ -8,12 +8,13 @@ export const ClearCompletedButton: FC = () => {
 
   const hasCompletedTodos = useHasCompletedTodos();
 
-  if (!hasCompletedTodos) {
-    return null;
-  }
-
   return (
-    <button onClick={clearCompleted} className={styles.clearButton}>
+    <button
+      onClick={clearCompleted}
+      className={styles.clearButton}
+      data-testid="clear-completed-button"
+      disabled={!hasCompletedTodos}
+    >
       Clear completed
     </button>
   );
