@@ -1,4 +1,4 @@
-import { type FC, type KeyboardEvent } from "react";
+import { type FC, type KeyboardEvent, type FormEvent } from "react";
 import clsx from "clsx";
 
 import styles from "./Input.module.scss";
@@ -9,7 +9,7 @@ interface InputProps {
   disabled?: boolean;
   autoFocus?: boolean;
   className?: string;
-  onChange: (value: string) => void;
+  onChange: (event: FormEvent<HTMLInputElement>) => void;
   type?: "text" | "email" | "password";
   onKeyDown?: (event: KeyboardEvent) => void;
 }
@@ -28,7 +28,7 @@ export const Input: FC<InputProps> = ({
     <input
       type={type}
       value={value}
-      onChange={(event) => onChange(event.target.value)}
+      onChange={onChange}
       placeholder={placeholder}
       disabled={disabled}
       className={clsx(styles.input, className)}

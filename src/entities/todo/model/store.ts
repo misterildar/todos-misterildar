@@ -4,9 +4,10 @@ import type { TodoState, TodoFilter, Todo } from "./types";
 
 export const useTodoStore = create<TodoState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       todos: [],
       filter: "all",
+      searchQuery: "",
 
       addTodo: (text: string) => {
         const newTodo: Todo = {
@@ -17,7 +18,7 @@ export const useTodoStore = create<TodoState>()(
         };
 
         set((state) => ({
-          todos: [...state.todos, newTodo],
+          todos: [newTodo, ...state.todos],
         }));
       },
 
@@ -45,27 +46,8 @@ export const useTodoStore = create<TodoState>()(
         set({ filter });
       },
 
-      getFilteredTodos: () => {
-        const { todos, filter } = get();
-        switch (filter) {
-          case "active":
-            return todos.filter((todo) => !todo.completed);
-          case "completed":
-            return todos.filter((todo) => todo.completed);
-          default:
-            return todos;
-        }
-      },
-
-      getStats: () => {
-        const { todos } = get();
-        const total = todos.length;
-        const completed = todos.reduce(
-          (acc, t) => acc + (t.completed ? 1 : 0),
-          0
-        );
-        const active = total - completed;
-        return { total, active, completed };
+      setSearchQuery: (searchQuery: string) => {
+        set({ searchQuery });
       },
     }),
     {

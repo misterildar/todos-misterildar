@@ -1,11 +1,11 @@
 @use "@/shared/styles/variables.scss" as *;
 
 .form {
-  padding: $spacing-lg;
-}
-
-.inputWrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: $spacing-xl;
+  gap: 3vw;
+
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
+  }
 }

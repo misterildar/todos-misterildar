@@ -16,13 +16,13 @@ export interface TodoStats {
 export interface TodoState {
   todos: Todo[];
   filter: TodoFilter;
+  searchQuery: string;
   addTodo: (text: string) => void;
   removeTodo: (id: string) => void;
   toggleTodo: (id: string) => void;
   clearCompleted: () => void;
   setFilter: (filter: TodoFilter) => void;
-  getFilteredTodos: () => Todo[];
-  getStats: () => TodoStats;
+  setSearchQuery: (query: string) => void;
 }
 
 export interface TodoItemProps {

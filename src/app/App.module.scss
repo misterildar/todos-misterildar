@@ -1,18 +1,21 @@
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   z-index: 1;
 }
 
 .todoapp {
+  border: 1px solid #544e4e;
   background: white;
-  margin: 130px 0 40px 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
+  padding: 25px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
   &::before {
     content: "";

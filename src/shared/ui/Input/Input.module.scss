@@ -16,4 +16,9 @@
     color: #989595;
     font-style: italic;
   }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    padding: 10px;
+  }
 }

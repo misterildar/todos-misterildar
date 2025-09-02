@@ -25,12 +25,15 @@ export const AddTodoForm: FC = () => {
     }
   };
 
+  const handleInputChange = (event: FormEvent<HTMLInputElement>) => {
+    setText(event.currentTarget.value);
+  };
+
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <div className={styles.inputWrapper}>
         <Input
           value={text}
-          onChange={setText}
+          onChange={handleInputChange}
           placeholder="What needs to be done?"
           onKeyDown={handleKeyDown}
           autoFocus
@@ -41,7 +44,6 @@ export const AddTodoForm: FC = () => {
           className={styles.button}
           text="Add Todo"
         />
-      </div>
     </form>
   );
 };

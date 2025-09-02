@@ -46,6 +46,11 @@
     background: transparent;
     border-color: #5dc2af;
   }
+
+  @media (max-width: 500px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .text {
@@ -54,6 +59,11 @@
   color: #4d4d4d;
   word-break: break-word;
   padding: 15px;
+
+  @media (max-width: 500px) {
+    font-size: 18px;
+    padding: 0;
+  }
 }
 
 .removeButton {
@@ -61,7 +71,6 @@
   height: 20px;
   margin: auto 0;
   font-size: 20px;
-  color: #cc9a9a;
   background: none;
   border: none;
   cursor: pointer;

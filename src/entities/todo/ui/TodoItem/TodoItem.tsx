@@ -1,9 +1,15 @@
 import { type FC } from "react";
-import type { TodoItemProps } from "../../model/types";
 import clsx from "clsx";
+
+import { HighlightedText } from "@/shared";
+import { useSearchQuery } from "../../model/hooks";
+import type { TodoItemProps } from "../../model/types";
+
 import styles from "./TodoItem.module.scss";
 
 export const TodoItem: FC<TodoItemProps> = ({ todo, onToggle, onRemove }) => {
+  const searchQuery = useSearchQuery();
+
   const handleToggle = () => {
     onToggle(todo.id);
   };
@@ -43,7 +49,13 @@ export const TodoItem: FC<TodoItemProps> = ({ todo, onToggle, onRemove }) => {
             </svg>
           )}
         </button>
-        <span className={styles.text}>{todo.text}</span>
+        <span className={styles.text}>
+          <HighlightedText
+            text={todo.text}
+            highlight={searchQuery}
+            className={styles.todoText}
+          />
+        </span>
       </div>
       <button
         onClick={handleRemove}
