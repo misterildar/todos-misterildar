@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import clsx from "clsx";
 
-import { HighlightedText } from "@/shared";
+import { HighlightedText, Button } from "@/shared";
 import { useSearchQuery } from "../../model/hooks";
 import type { TodoItemProps } from "../../model/types";
 
@@ -58,13 +58,14 @@ export const TodoItem: FC<TodoItemProps> = ({ todo, onToggle, onRemove }) => {
           />
         </span>
       </div>
-      <button
+      <Button
         onClick={handleRemove}
-        className={styles.removeButton}
+        icon="✕"
+        variant="icon"
+        size="small"
         aria-label="Remove task"
-      >
-        ✕
-      </button>
+        className={styles.removeButton}
+      />
     </div>
   );
 };

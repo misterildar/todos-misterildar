@@ -19,6 +19,21 @@
   &:not(:disabled):hover {
     transform: translateY(-1px);
   }
+
+  &.iconOnly {
+    width: auto;
+    min-width: 40px;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  line-height: 1;
 }
 
 .primary {
@@ -31,24 +46,8 @@
 }
 
 .secondary {
-  background: $gray-light;
+  background: none;
   color: $gray-darker;
-  border: 1px solid $gray-medium;
-
-  &:not(:disabled):hover {
-    background: $gray-medium;
-    border-color: $gray-dark;
-  }
-}
-
-.danger {
-  background: linear-gradient(135deg, $danger-color 0%, $danger-hover 100%);
-  color: white;
-  box-shadow: 0 4px 15px $shadow-danger;
-
-  &:not(:disabled):hover {
-    box-shadow: 0 6px 20px $shadow-danger;
-  }
 }
 
 .small {

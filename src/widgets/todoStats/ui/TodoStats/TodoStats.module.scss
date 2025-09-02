@@ -18,14 +18,11 @@
   }
 }
 
-.stats {
-  display: flex;
-  align-items: center;
-}
-
 .counter {
   font-size: $text-sm;
   color: $gray-dark;
+  display: flex;
+  align-items: center;
 }
 
 .filters {
@@ -43,8 +40,8 @@
   margin: 3px;
   padding: 3px 7px;
   text-decoration: none;
-  border: 1px solid transparent;
-  border-radius: 3px;
+  border: 2px solid transparent;
+  border-radius: 6px;
   background: none;
   cursor: pointer;
   font-size: $text-sm;
@@ -55,10 +52,23 @@
 
   &.active {
     border-color: $border-accent;
+    color: $gray-darker;
   }
 }
 
 .actions {
   display: flex;
   align-items: center;
+}
+
+.actionsButton {
+  color: $gray-dark;
+
+  &:hover:not(:disabled) {
+    color: $gray-darker;
+    text-decoration: underline;
+  }
+  &.active {
+    color: $gray-darker;
+  }
 }

@@ -15,12 +15,34 @@ vi.mock("@/entities/todo", () => ({
   useTodoFilter: () => "all",
   useTodoActions: () => ({
     setFilter: mockSetFilter,
+    clearCompleted: mockClearCompleted,
   }),
 }));
 
-vi.mock("@/features/clearCompleted", () => ({
-  ClearCompletedButton: () => (
-    <button onClick={mockClearCompleted}>Clear completed</button>
+vi.mock("@/shared", () => ({
+  Button: ({
+    onClick,
+    text,
+    className,
+    disabled,
+    "data-testid": dataTestId,
+  }: {
+    onClick?: () => void;
+    text?: string;
+    variant?: string;
+    size?: string;
+    className?: string;
+    disabled?: boolean;
+    "data-testid"?: string;
+  }) => (
+    <button
+      onClick={onClick}
+      className={className}
+      disabled={disabled}
+      data-testid={dataTestId}
+    >
+      {text}
+    </button>
   ),
 }));
 

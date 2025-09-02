@@ -21,6 +21,26 @@ vi.mock("@/shared", () => ({
       {text} {highlight && `[${highlight}]`}
     </span>
   ),
+  Button: ({
+    onClick,
+    icon,
+    "aria-label": ariaLabel,
+    className,
+  }: {
+    onClick?: () => void;
+    icon?: string;
+    "aria-label"?: string;
+    className?: string;
+  }) => (
+    <button
+      onClick={onClick}
+      className={className}
+      aria-label={ariaLabel}
+      data-testid="button"
+    >
+      {icon}
+    </button>
+  ),
 }));
 
 describe("TodoItem", () => {
@@ -50,7 +70,7 @@ describe("TodoItem", () => {
     });
     expect(checkbox).toBeInTheDocument();
     expect(checkbox).toHaveAttribute("aria-label", "Mark as not completed");
-    const removeButton = screen.getByRole("button", { name: "Remove task" });
+    const removeButton = screen.getByTestId("button");
     expect(removeButton).toBeInTheDocument();
     expect(removeButton).toHaveTextContent("✕");
     const highlightedText = screen.getByTestId("highlighted-text");
@@ -72,7 +92,7 @@ describe("TodoItem", () => {
     });
     await user.click(checkbox);
     expect(onToggleMock).toHaveBeenCalledWith("test-123");
-    const removeButton = screen.getByRole("button", { name: "Remove task" });
+    const removeButton = screen.getByTestId("button");
     await user.click(removeButton);
     expect(onRemoveMock).toHaveBeenCalledWith("test-123");
   });

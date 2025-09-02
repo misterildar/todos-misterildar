@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import clsx from "clsx";
 
-import { ClearCompletedButton } from "@/features/clearCompleted";
+import { Button } from "@/shared";
 import { useTodoStats, useTodoFilter, useTodoActions } from "@/entities/todo";
 
 import styles from "./TodoStats.module.scss";
@@ -11,7 +11,7 @@ export const TodoStats: FC = () => {
 
   const currentFilter = useTodoFilter();
 
-  const { setFilter } = useTodoActions();
+  const { setFilter, clearCompleted } = useTodoActions();
 
   const filters = [
     { key: "all" as const, label: "All", count: stats.total },
@@ -21,24 +21,33 @@ export const TodoStats: FC = () => {
 
   return (
     <div className={styles.todoStats}>
-      <div className={styles.stats}>
-        <span className={styles.counter}>{stats.active} items left</span>
-      </div>
+      <span className={styles.counter}>{stats.active} items left</span>
       <div className={styles.filters}>
         {filters.map((filter) => (
-          <button
+          <Button
             key={filter.key}
             onClick={() => setFilter(filter.key)}
+            text={filter.label}
+            variant="secondary"
+            size="small"
             className={clsx(styles.filterButton, {
               [styles.active]: currentFilter === filter.key,
             })}
-          >
-            {filter.label}
-          </button>
+          />
         ))}
       </div>
       <div className={styles.actions}>
-        <ClearCompletedButton />
+        <Button
+          onClick={clearCompleted}
+          text="Clear completed"
+          variant="secondary"
+          size="small"
+          disabled={stats.completed === 0}
+          data-testid="clear-completed-button"
+          className={clsx(styles.actionsButton, {
+            [styles.active]: stats.completed > 0,
+          })}
+        />
       </div>
     </div>
   );
