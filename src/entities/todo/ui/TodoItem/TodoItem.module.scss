@@ -4,9 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: $md;
   border-bottom: 1px solid $gray-medium;
-  font-size: 24px;
+  font-size: $text-xl;
   border: none;
   transition: all $transition-normal;
 
@@ -21,12 +21,12 @@
 .content {
   display: flex;
   align-items: center;
-  gap: $spacing-md;
+  gap: $md;
 }
 
 .checkbox {
-  width: 40px;
-  height: 40px;
+  width: $size-md;
+  height: $size-md;
   border: 1px solid $gray-medium;
   border-radius: 50%;
   background: transparent;
@@ -36,7 +36,7 @@
   justify-content: center;
   transition: all $transition-normal;
   color: $accent-success;
-  margin-right: 15px;
+  margin-right: $md;
 
   &:hover {
     border-color: $accent-success;
@@ -48,29 +48,29 @@
   }
 
   @media (max-width: 500px) {
-    width: 30px;
-    height: 30px;
+    width: $size-sm;
+    height: $size-sm;
   }
 }
 
 .text {
   flex: 1;
-  font-size: 24px;
+  font-size: $text-xl;
   color: $gray-darker;
   word-break: break-word;
-  padding: 15px;
+  padding: $md;
 
   @media (max-width: 500px) {
-    font-size: 18px;
+    font-size: $text-lg;
     padding: 0;
   }
 }
 
 .removeButton {
-  width: 20px;
-  height: 20px;
+  width: $size-xs;
+  height: $size-xs;
   margin: auto 0;
-  font-size: 20px;
+  font-size: $size-xs;
   background: none;
   border: none;
   cursor: pointer;

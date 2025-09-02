@@ -4,11 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: $lg 0;
   text-align: center;
   border-top: 1px solid $gray-medium;
   color: $gray-dark;
-  font-size: 14px;
+  font-size: $text-sm;
 
   @media (max-width: 500px) {
     flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .counter {
-  font-size: 14px;
+  font-size: $text-sm;
   color: $gray-dark;
 }
 
@@ -47,14 +47,14 @@
   border-radius: 3px;
   background: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: $text-sm;
 
   &:hover {
-    border-color: rgba(175, 47, 47, 0.1);
+    border-color: $border-accent;
   }
 
   &.active {
-    border-color: rgba(175, 47, 47, 0.2);
+    border-color: $border-accent;
   }
 }
 

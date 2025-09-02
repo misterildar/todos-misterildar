@@ -12,24 +12,23 @@
   border: 1px solid $gray-darker;
   background: $white;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 $shadow-dark, 0 $lg 50px 0 $shadow-light;
+  padding: $lg;
+  border-radius: $radius-md;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: $md;
 
   &::before {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: -15px;
+    top: $md;
+    left: $md;
+    right: $md;
+    bottom: -$md;
     background: $gray-light;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15),
-      0 20px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: $radius-md;
+    box-shadow: 0 4px 8px 0 $shadow-medium, 0 $lg 40px 0 $shadow-light;
     z-index: -1;
   }
 
@@ -41,9 +40,8 @@
     right: 30px;
     bottom: -30px;
     background: $gray-light;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1),
-      0 30px 60px 0 rgba(0, 0, 0, 0.08);
+    border-radius: $radius-md;
+    box-shadow: 0 6px 12px 0 $shadow-light, 0 30px $size-xl 0 $shadow-light;
     z-index: -2;
   }
 }

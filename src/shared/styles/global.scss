@@ -22,7 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $spacing-md;
+  padding: $md;
 }
 
 .text-center {
@@ -30,27 +30,27 @@ body {
 }
 
 .mb-sm {
-  margin-bottom: $spacing-sm;
+  margin-bottom: $sm;
 }
 
 .mb-md {
-  margin-bottom: $spacing-md;
+  margin-bottom: $md;
 }
 
 .mb-lg {
-  margin-bottom: $spacing-lg;
+  margin-bottom: $lg;
 }
 
 .mt-sm {
-  margin-top: $spacing-sm;
+  margin-top: $sm;
 }
 
 .mt-md {
-  margin-top: $spacing-md;
+  margin-top: $md;
 }
 
 .mt-lg {
-  margin-top: $spacing-lg;
+  margin-top: $lg;
 }
 
 mark.highlight {

@@ -1,24 +1,30 @@
 @use "@/shared/styles/variables.scss" as *;
 
-.toggleButton {
-  width: 20px;
-  height: 20px;
+.checkbox {
+  width: 40px;
+  height: 40px;
   border: 2px solid $border-color;
-  border-radius: $border-radius-sm;
-  background: white;
+  border-radius: $radius-sm;
+  background: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all $transition-normal;
-  color: white;
+  color: $accent-success;
+  margin-right: $md;
 
   &:hover {
-    border-color: $primary-color;
+    border-color: $accent-success;
   }
 
-  &.completed {
-    background: $primary-color;
-    border-color: $primary-color;
+  &.checked {
+    background: transparent;
+    border-color: $accent-success;
+  }
+
+  @media (max-width: 500px) {
+    width: 30px;
+    height: 30px;
   }
 }

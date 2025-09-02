@@ -17,7 +17,7 @@
   &:focus {
     outline: none;
     border-color: $primary-color;
-    box-shadow: 0 0 0 3px rgba(36, 106, 171, 0.1);
+    box-shadow: 0 0 0 3px $shadow-primary;
   }
 
   &::placeholder {
@@ -27,7 +27,7 @@
 
 .clearButton {
   position: absolute;
-  right: 25px;
+  right: $lg;
   top: 50%;
   transform: translateY(-50%);
   background: none;
